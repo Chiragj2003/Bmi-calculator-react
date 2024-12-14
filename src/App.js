@@ -17,16 +17,9 @@ function App() {
   let calcBmi = (e) =>{
     e.preventDefault();
 
-  // Toggle theme function
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
-
-
     if(weight === 0 || height === 0){
       alert("please enter a valid height and weight")
     }
-
     else{
       let bmi =(weight/(height*height)*703)
       setBmi(bmi.toFixed(1))
@@ -50,9 +43,14 @@ let reload= () =>{
   window.location.reload()
 }
 
+ // Toggle theme function
+ const toggleTheme = () => {
+  setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+};
+
 
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <div className="contsiner">
         <h2>BMI calculator</h2>
         <form onSubmit={calcBmi}>

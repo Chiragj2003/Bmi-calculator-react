@@ -7,8 +7,8 @@
   
   /* Light Theme Styles */
   .App.light {
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #f4f4f9;  /* Light background color */
+    color: #333;  /* Dark text for light mode */
   }
   
   .container.light {
@@ -18,8 +18,8 @@
   
   /* Dark Theme Styles */
   .App.dark {
-    background-color: #181818;
-    color: #fff;
+    background-color: #181818;  /* Dark background color */
+    color: #fff;  /* Light text for dark mode */
   }
   
   .container.dark {
@@ -27,18 +27,36 @@
     border: 1px solid #444;
   }
   
+  /* Layout Styles to Center the Calculator */
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Make the container fill the full viewport height */
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px; /* Limit the width of the form */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
   /* Header */
   h2 {
-    text-align: center;
+    font-size: 24px;
     margin-bottom: 20px;
   }
   
   h3 {
-    color: inherit; /* Inherit color based on theme */
+    color: inherit;
   }
   
   p {
-    color: inherit; /* Inherit color based on theme */
+    color: inherit;
   }
   
   /* Form Layout */
@@ -92,12 +110,6 @@
   .btn-outline:hover {
     background-color: #007BFF;
     color: white;
-  }
-  
-  /* Centered Result */
-  .center {
-    text-align: center;
-    margin-top: 20px;
   }
   
   /* Toggle Button */
