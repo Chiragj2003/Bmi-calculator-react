@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Light Theme Styles */
+  .App.light {
+    background-color: #f4f4f9;
+    color: #333;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .container.light {
+    background-color: #fff;
+    border: 1px solid #ddd;
   }
-}
+  
+  /* Dark Theme Styles */
+  .App.dark {
+    background-color: #181818;
+    color: #fff;
+  }
+  
+  .container.dark {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+  }
+  
+  /* Header */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: inherit; /* Inherit color based on theme */
+  }
+  
+  p {
+    color: inherit; /* Inherit color based on theme */
+  }
+  
+  /* Form Layout */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Input Fields */
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 1px solid #007BFF;
+    color: #007BFF;
+  }
+  
+  .btn-outline:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  /* Centered Result */
+  .center {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Toggle Button */
+  .theme-toggle-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+      max-width: 90%;
+    }
+  }
+  
+  
